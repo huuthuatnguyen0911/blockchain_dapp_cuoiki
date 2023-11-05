@@ -45,21 +45,21 @@ const CreateCampaign = () => {
     <div className="bg-[#1c1c24] flex justify-center items-center flex-col rounded-[10px] sm:p-10 p-4">
       {isLoading && <Loader />}
       <div className="flex justify-center items-center p-[16px] sm:min-w-[380px] bg-[#3a3a43] rounded-[10px]">
-        <h1 className="font-epilogue font-bold sm:text-[25px] text-[18px] leading-[38px] text-white">Start a Campaign</h1>
+        <h1 className="font-epilogue font-bold sm:text-[25px] text-[18px] leading-[38px] text-white">Bắt đầu chiến dịch</h1>
       </div>
 
       <form onSubmit={handleSubmit} className="w-full mt-[65px] flex flex-col gap-[30px]">
         <div className="flex flex-wrap gap-[40px]">
           <FormField 
-            labelName="Your Name *"
-            placeholder="John Doe"
+            labelName="Tên của bạn *"
+            placeholder="Nguyễn Hữu Thuật"
             inputType="text"
             value={form.name}
             handleChange={(e) => handleFormFieldChange('name', e)}
           />
           <FormField 
-            labelName="Campaign Title *"
-            placeholder="Write a title"
+            labelName="Tên chiến dịch *"
+            placeholder="Bảo vệ môi trường/động vật"
             inputType="text"
             value={form.title}
             handleChange={(e) => handleFormFieldChange('title', e)}
@@ -67,8 +67,8 @@ const CreateCampaign = () => {
         </div>
 
         <FormField 
-            labelName="Story *"
-            placeholder="Write your story"
+            labelName="Mô tả chiến dịch *"
+            placeholder="Viết mô tả tổng quan cho chiến dịch của bạn"
             isTextArea
             value={form.description}
             handleChange={(e) => handleFormFieldChange('description', e)}
@@ -76,19 +76,19 @@ const CreateCampaign = () => {
 
         <div className="w-full flex justify-start items-center p-4 bg-[#8c6dfd] h-[120px] rounded-[10px]">
           <img src={money} alt="money" className="w-[40px] h-[40px] object-contain"/>
-          <h4 className="font-epilogue font-bold text-[25px] text-white ml-[20px]">You will get 100% of the raised amount</h4>
+          <h4 className="font-epilogue font-bold text-[25px] text-white ml-[20px]">Bạn sẽ nhận được 100% số tiền quyên góp được</h4>
         </div>
 
         <div className="flex flex-wrap gap-[40px]">
           <FormField 
-            labelName="Goal *"
+            labelName="Mục tiêu đề ra *"
             placeholder="ETH 0.50"
             inputType="text"
             value={form.target}
             handleChange={(e) => handleFormFieldChange('target', e)}
           />
           <FormField 
-            labelName="End Date *"
+            labelName="Ngày kết thúc chiến dịch *"
             placeholder="End Date"
             inputType="date"
             value={form.deadline}
@@ -97,8 +97,8 @@ const CreateCampaign = () => {
         </div>
 
         <FormField 
-            labelName="Campaign image *"
-            placeholder="Place image URL of your campaign"
+            labelName="Ảnh đại diện cho chiến dịch *"
+            placeholder="Vui lòng tải lên ảnh đại diện cho chiến dịch của bạn"
             inputType="url"
             value={form.image}
             handleChange={(e) => handleFormFieldChange('image', e)}
@@ -107,7 +107,7 @@ const CreateCampaign = () => {
           <div className="flex justify-center items-center mt-[40px]">
             <CustomButton 
               btnType="submit"
-              title="Submit new campaign"
+              title="Tạo chiến dịch"
               styles="bg-[#1dc071]"
             />
           </div>
