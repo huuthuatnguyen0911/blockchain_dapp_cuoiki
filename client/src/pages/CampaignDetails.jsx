@@ -58,8 +58,12 @@ const CampaignDetails = () => {
                 )}%`,
                 maxWidth: "100%",
               }}
-            ></div>
+            >
+            </div>
           </div>
+              <span className=" text-white">
+                {calculateBarPercentage(state.target, state.amountCollected)}% Thành công
+              </span>
         </div>
 
         <div className="flex md:w-[150px] w-full flex-wrap justify-between gap-[30px]">
